@@ -1,10 +1,22 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: []
-}
+  siteName: 'Ristorante Pizzeria Casa Nostra',
+  plugins: [
+    {
+      use: "@gridsome/source-airtable",
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY,
+        baseId: process.env.AIRTABLE_BASE,
+        tables: [
+          {
+            name: "Speisen",
+            typeName: "Speisen",
+            select: {},
+            links: [],
+          },
+        ],
+        tableName: "Speisen",
+      },
+    },
+  ],
+  templates: {},
+};
