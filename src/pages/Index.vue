@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1>Ristorante Pizzeria Casa Nostra</h1>
+    <h1>Home</h1>
   </Layout>
 </template>
 

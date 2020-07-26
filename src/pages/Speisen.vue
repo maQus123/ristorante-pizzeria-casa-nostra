@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1>Speisekarte</h1>
+    <h1>Speisen</h1>
     <div>
       <ul>
         <li v-for="edge in $page.allSpeisen.edges" :key="edge.node.id">{{edge.node.name}}</li>
@@ -25,7 +25,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "Speisekarte",
+    title: "Speisen",
   },
 };
 </script>
