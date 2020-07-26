@@ -11,8 +11,36 @@ module.exports = {
             name: "Speisen",
             typeName: "Speisen",
             select: {},
-            links: [],
+            links: [
+              {
+                fieldName: 'Kategorie',
+                typeName: 'Speisekategorien',
+                linkToFirst: true
+              },
+              {
+                fieldName: 'Allergene',
+                typeName: 'Allergene',
+                linkToFirst: false
+              },
+              {
+                fieldName: 'Zusatzstoffe',
+                typeName: 'Zusatzstoffe',
+                linkToFirst: false
+              }
+            ],
           },
+          {
+            name: "Speisekategorien",
+            typeName: "Speisekategorien"
+          },
+          {
+            name: "Zusatzstoffe",
+            typeName: "Zusatzstoffe"
+          },
+          {
+            name: "Allergene",
+            typeName: "Allergene"
+          }
         ],
         tableName: "Speisen",
       },
