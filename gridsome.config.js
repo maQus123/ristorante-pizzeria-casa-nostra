@@ -2,21 +2,16 @@ module.exports = {
   siteName: 'Ristorante Pizzeria Casa Nostra',
   plugins: [
     {
-      use: "@gridsome/source-airtable",
+      use: '@gridsome/source-airtable',
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
-        baseId: process.env.AIRTABLE_BASE,
+        base: process.env.AIRTABLE_BASE,
         tables: [
           {
-            name: "Speisen",
-            typeName: "Speisen",
+            name: 'Pizza',
+            typeName: 'Pizza',
             select: {},
             links: [
-              {
-                fieldName: 'Kategorie',
-                typeName: 'Speisekategorien',
-                linkToFirst: true
-              },
               {
                 fieldName: 'Allergene',
                 typeName: 'Allergene',
@@ -27,22 +22,18 @@ module.exports = {
                 typeName: 'Zusatzstoffe',
                 linkToFirst: false
               }
-            ],
+            ]
           },
           {
-            name: "Speisekategorien",
-            typeName: "Speisekategorien"
+            name: 'Allergene',
+            typeName: 'Allergene',
           },
           {
-            name: "Zusatzstoffe",
-            typeName: "Zusatzstoffe"
-          },
-          {
-            name: "Allergene",
-            typeName: "Allergene"
+            name: 'Zusatzstoffe',
+            typeName: 'Zusatzstoffe',
           }
         ],
-        tableName: "Speisen",
+        tableName: 'Pizza',
       },
     },
   ],

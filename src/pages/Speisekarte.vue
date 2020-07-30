@@ -1,34 +1,28 @@
 <template>
   <Layout>
-    <h1>Speisekarte</h1>
     <table>
       <tr>
         <th></th>
         <th></th>
       </tr>
-      <tr v-for="edge in $page.allSpeisen.edges" :key="edge.node.id">
+      <tr v-for="edge in $page.allPizza.edges" :key="edge.node.id">
         <td>{{edge.node.name}} ({{edge.node.beschreibung}})</td>
-        <td>{{edge.node.preis}}</td>
+        <td>{{edge.node.preisKlein}}</td>
       </tr>
     </table>
   </Layout>
 </template>
 
 <page-query>
-  query Speisen {
-    allSpeisen {
+  query Pizza {
+    allPizza {
       edges {
         node {
           id
 				  name
           beschreibung
-          kategorie {
-            name
-          }
-          preis
-          preisbeschreibung
-          alternativpreis
-          alternativpreisbeschreibung
+          preisKlein
+          preisGross
           allergene {
             name
             abkuerzung
@@ -46,7 +40,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "Speisen",
+    title: "Speisekarte",
     meta: [{ name: "author", content: "John Doe" }],
   },
 };
