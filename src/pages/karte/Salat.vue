@@ -1,8 +1,8 @@
 <template>
   <Layout>
     <div>
-      <h1>Über Uns</h1>
-      <p>Über Uns</p>
+      <h1>Salat</h1>
+      <p>Salat</p>
     </div>
   </Layout>
 </template>

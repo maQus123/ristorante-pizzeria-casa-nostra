@@ -1,6 +1,9 @@
 <template>
   <Layout>
-    <p>Öffnungszeiten</p>
+    <div>
+      <h1>Öffnungszeiten</h1>
+      <p>Öffnungszeiten</p>
+    </div>
   </Layout>
 </template>
 

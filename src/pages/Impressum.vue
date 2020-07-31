@@ -1,6 +1,9 @@
 <template>
   <Layout>
-    <p>Impressum</p>
+    <div>
+      <h1>Impressum</h1>
+      <p>Impressum</p>
+    </div>
   </Layout>
 </template>
 

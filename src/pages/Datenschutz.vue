@@ -1,6 +1,9 @@
 <template>
   <Layout>
-    <p>Datenschutz</p>
+    <div>
+      <h1>Datenschutz</h1>
+      <p>Datenschutz</p>
+    </div>
   </Layout>
 </template>
 
